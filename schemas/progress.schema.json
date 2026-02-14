@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LearningProgressEvent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "user_id",
+    "course_id",
+    "node_id",
+    "timestamp",
+    "mastery"
+  ],
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "course_id": {
+      "type": "string"
+    },
+    "node_id": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mastery": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "signals": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "semantic_similarity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "coverage_delta": {
+          "type": "number"
+        },
+        "error_backtracking_depth": {
+          "type": "number"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
