@@ -9,6 +9,15 @@ GraphLearn is a graph-first learning platform.
 - AI: extraction, QA, question generation, grading (LLM + embeddings)
 - Infra: local dev stack, CI, deploy notes
 
+## MVP stack (baseline)
+
+- Frontend: React + TypeScript + Vite + Cytoscape.js
+- Backend API: FastAPI (Python)
+- AI workers: Python + LLM SDKs (extraction, QA, assessment)
+- Jobs/queues: Celery + Redis
+- Data: Neo4j (graph), Postgres (progress/metadata), S3/MinIO (sources)
+- Infra: docker compose (local), optional K8s later
+
 ## Data stores
 
 - Graph DB (e.g., Neo4j)
