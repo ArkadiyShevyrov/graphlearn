@@ -56,7 +56,7 @@ graphlearn/
 
 ## Tech stack (baseline)
 
-- Frontend: React + TypeScript + Vite + Cytoscape.js
+- Frontend: React + TypeScript + Vite + Tailwind CSS + Cytoscape.js (FSD)
 - Backend API: FastAPI (Python)
 - AI workers: Python + LLM SDKs (extraction, QA, assessment)
 - Jobs/queues: Celery + Redis
@@ -67,7 +67,7 @@ graphlearn/
 
 ## Quick start (dev)
 
-This repo ships with a minimal dev stack for local work (Neo4j + placeholders).
+This repo ships with a minimal dev stack for local work (Neo4j + backend + AI).
 
 1) Copy env example and edit as needed:
 ```bash
@@ -76,12 +76,32 @@ cp infra/.env.example infra/.env
 
 2) Start services:
 ```bash
-cd infra
-docker compose up -d
+docker compose --env-file infra/.env -f infra/docker-compose.yml up -d
 ```
 
 3) Open Neo4j Browser:
 - http://localhost:7474
+
+4) Backend API:
+- http://localhost:8000/health
+
+5) AI service:
+- http://localhost:8001/docs
+
+## Module dev (local)
+
+- Backend:
+  - `cd backend`
+  - `pip install -r requirements.txt`
+  - `uvicorn app.main:app --reload --port 8000`
+- AI:
+  - `cd ai`
+  - `pip install -r requirements.txt`
+  - `uvicorn app.main:app --reload --port 8001`
+- Frontend:
+  - `cd frontend`
+  - `npm install`
+  - `npm run dev`
 
 ---
 

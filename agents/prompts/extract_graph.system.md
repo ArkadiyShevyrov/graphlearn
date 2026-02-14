@@ -7,7 +7,7 @@ Strict output rule:
 Return ONLY valid JSON (no markdown, no prose) that matches the schema below:
 - keys: nodes, edges
 - nodes: [{id,title,type,aliases?,source?,metadata?}]
-- edges: [{source,target,relation,weight?,source?,metadata?}]
+- edges: [{from,target,relation,weight?,source?,metadata?}]
 
 Constraints:
 - Do NOT invent nodes or edges not supported by the text.

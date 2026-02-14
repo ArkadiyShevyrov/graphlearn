@@ -11,7 +11,7 @@ GraphLearn is a graph-first learning platform.
 
 ## MVP stack (baseline)
 
-- Frontend: React + TypeScript + Vite + Cytoscape.js
+- Frontend: React + TypeScript + Vite + Tailwind CSS + Cytoscape.js (FSD)
 - Backend API: FastAPI (Python)
 - AI workers: Python + LLM SDKs (extraction, QA, assessment)
 - Jobs/queues: Celery + Redis

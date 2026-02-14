@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #1f2a33;
+  background: radial-gradient(circle at top left, #eef4f7, #d7e4ea);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+  padding: 16px;
+  height: 100vh;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d0dde4;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.panel-main {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.panel-side {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.panel-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  color: #4b5c68;
+  font-size: 14px;
+}
+
+.actions button {
+  border: none;
+  background: #1f5b7a;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background: #17445c;
+}
+
+.status {
+  margin: 8px 0 12px;
+  color: #3c5160;
+  font-size: 13px;
+}
+
+.graph-canvas {
+  flex: 1;
+  min-height: 360px;
+  border-radius: 12px;
+  border: 1px solid #e1edf2;
+}
+
+.muted {
+  color: #6e7d88;
+}
+
+.details {
+  display: grid;
+  gap: 12px;
+}
+
+.detail-row {
+  display: grid;
+  gap: 4px;
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7b86;
+}
+
+@media (max-width: 980px) {
+  .app {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .panel-side {
+    order: 2;
+  }
+}

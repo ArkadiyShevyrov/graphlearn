@@ -20,7 +20,7 @@ Goal: turn raw educational text into a stored knowledge graph with deduped nodes
 
 4) **Merge**
 - Deduplicate nodes by canonical title + type (and alias list).
-- Deduplicate edges by (source,target,relation).
+- Deduplicate edges by (from,target,relation).
 - Preserve provenance: keep `source_id` + `locator` for nodes/edges.
 
 5) **Persist**

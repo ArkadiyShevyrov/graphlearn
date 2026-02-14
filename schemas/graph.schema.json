@@ -70,22 +70,14 @@
         "type": "object",
         "additionalProperties": false,
         "required": [
-          "source",
+          "from",
           "target",
           "relation"
         ],
         "properties": {
-          "source": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "source_id": {
-                "type": "string"
-              },
-              "locator": {
-                "type": "string"
-              }
-            }
+          "from": {
+            "type": "string",
+            "minLength": 1
           },
           "target": {
             "type": "string",
@@ -105,6 +97,18 @@
           },
           "weight": {
             "type": "number"
+          },
+          "source": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "source_id": {
+                "type": "string"
+              },
+              "locator": {
+                "type": "string"
+              }
+            }
           },
           "metadata": {
             "type": "object",
